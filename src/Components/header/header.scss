@@ -1,0 +1,164 @@
+@import '../../style/vars';
+.header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  overflow-x: clip;
+}
+.head-anim {
+  will-change: transform;
+}
+  .menu {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      display: block;
+    }
+    &__logo {
+      width: 170px;
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__wrapper {
+      display: flex;
+      margin-left: auto;
+      margin-right: 20px;
+      gap: 15px;
+      align-items: center;
+    }
+    &__item {
+      font-family: 'CraftworkGrotesk', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: $black;
+      display: block;
+      & a {
+        display: block;
+        padding: 30px 60px;
+        border-radius: 50px;
+        transition: all .3s ease-in-out;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .active {
+    background-color: #000;
+    color: #fff;
+  }
+  .mobile {
+    display: none;
+  }
+  
+  .transition-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .transition-block {
+    position: absolute;
+    background-color: #fff;
+    width: 50vw;
+    height: 50vh;
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+      border-bottom-right-radius: 150px;
+    }
+    &:nth-child(2) {
+      top: 0;
+      right: 0;
+      border-bottom-left-radius: 150px;
+    }
+    &:nth-child(3) {
+      left: 0;
+      bottom: 0;
+      border-top-right-radius: 150px;
+    }
+    &:nth-child(4) {
+      right: 0;
+      bottom: 0;
+      border-top-left-radius: 150px;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .menu {
+      &__logo {
+        width: 150px;
+      }
+      &__item {
+        font-size: 28px;
+        a {
+          padding: 30px 40px;
+        }
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .menu {
+      &__logo {
+        width: 120px;
+      }
+      &__wrapper {
+        margin: 0 auto;
+        gap: 40px;
+      }
+      &__item {
+        font-size: 24px;
+        a {
+          padding: 0;
+          &:hover {
+            background-color: transparent;
+            color: $red;
+          }
+        }
+      }
+    }
+    .active {
+      background-color: transparent;
+      color: $red;
+    }
+  }
+  @media (max-width: 768px) {
+    .menu {
+      &__logo {
+        width: 100px;
+      }
+      &__item {
+        font-size: 18px;
+      }
+    }
+    .desctop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+  @media (max-width: 500px) {
+    .menu {
+      &__logo {
+        width: 70px;
+      }
+      &__wrapper {
+        gap: 25px;
+      }
+      &__item {
+        font-size: 15px;
+      }
+    }
+  }

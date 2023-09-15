@@ -1,0 +1,8 @@
+.cases__li {
+    will-change: transform;
+}
+@media(max-width: 768px) {
+    .hidden {
+        display: none;
+    }
+}

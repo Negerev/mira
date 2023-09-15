@@ -1,0 +1,27 @@
+.mira-block {
+    position: absolute;
+    background-color: #fff;
+    width: 50vw;
+    height: 50vh;
+  }
+  
+  .mira-block:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 150px;
+  }
+  .mira-block:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 150px;
+  }
+  .mira-block:nth-child(3) {
+    left: 0;
+    bottom: 0;
+    border-top-right-radius: 150px;
+  }
+  .mira-block:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 150px;
+  }

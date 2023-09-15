@@ -1,0 +1,60 @@
+body.page-404 {
+  background-color: #000;
+  .menu__logo svg path {
+    fill: #fff;
+  }
+  .menu__item {
+    color: #fff;
+  }
+}
+.footer {
+  display: none;
+}
+
+.page-404 {
+  &__inner {
+    max-width: 1065px;
+    margin: 0 auto;
+    padding: 0 40px;
+    color: #fff;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
+  }
+  &__text {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1440px) {
+  .page-404 {
+    &__inner {
+      max-width: 750px;
+    }
+    &__title {
+      font-size: 48px;
+    }
+    &__text {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-404 {
+    &__inner {
+      padding: 0 15px;
+      max-width: 470px;
+    }
+    &__title {
+      font-size: 42px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
